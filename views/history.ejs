@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login History</title>
+</head>
+<body>
+  <% include('navigation') %>
+
+  <h1>Login History</h1>
+<!-- Logout button -->
+<a href="/logout">Logout</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Date/Time</th>
+        <th>User Agent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% loginHistory.forEach((login) => { %>
+        <tr>
+          <td><%= login.dateTime %></td>
+          <td><%= login.userAgent %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
